@@ -7,8 +7,8 @@ class House:
         if new_floor < 1 and new_floor > self.numbers_of_floors:
             print('There is not such floor')
         else:
-            for f in range(1, new_floor+1, -1):
-                print(f)
+            for floor in range(1, new_floor+1, -1):
+                print(f'Этаж: {floor}')
 
 def main():
     h1 = House('ЖК Горский', 18)
