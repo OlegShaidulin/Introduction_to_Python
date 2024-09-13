@@ -1,4 +1,4 @@
-class Venicle:
+class Vehicle:
     __COLOR_VARIANTS = ['blue', 'red', 'brown', 'yellow', 'silver']
     def __init__(self, owner: str, _model: str, __engine_power: int, __color: str):
         self.owner = owner
@@ -12,15 +12,15 @@ class Venicle:
     def get_color(self):
         return f'Цвет: {self.__color}'
     def print_info(self):
-        print(self.get_model, self.get_horsepower, self.get_color)
+        print(self.get_model(), self.get_horsepower(), self.get_color())
         print(f'Владелец: {self.owner}')
     def set_color(self, new_color: str):
-        if new_color.lower in __COLOR_VARIANTS:
+        if new_color.lower() in self.__COLOR_VARIANTS:
             self.__color = new_color
         else:
             print(f'Нельзя сменить цвет на {new_color}')
 
-class Sedan(Venicle):
+class Sedan(Vehicle):
     __PASSENGERS_LIMIT = 5
     
 # Текущие цвета __COLOR_VARIANTS = ['blue', 'red', 'brown', 'yellow', 'silver']
